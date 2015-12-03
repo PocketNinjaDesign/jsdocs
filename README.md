@@ -17,7 +17,7 @@ Things to look into are:
 ### Downloading repo ###
 
 ```
-git clone git@bitbucket.org:lenses/jsdoc-documentation.git
+git clone git@github.com:eyeamaman/jsdocs.git
 ```
 
 
