@@ -40,12 +40,14 @@ you will then have a folder called out generated with an index.html file you can
 in order to use the conf.json file run
 
 ```
-jsdoc dev/js -c conf.json
+jsdoc -c conf.json
 ```
 
-You will now have documentation which renders with a horrible red background. This is because it's using the template egg within documents/templates.  This now means you know you can duplicate the folder and create your own template themes rather easily.  Well copying part not necessarily the actual styling etc :-D
+You will now have documentation which renders my basic eyeamaman theme. The template is specified in the conf.json, as is the output folder.
 
-## Other template example ##
+All you have to do is duplicate one of the folders and create your own template theme.  Or just use mine!  The eyeamaman theme will be getting better, I've already added a sub navigation of Methods etc so you can scroll down the page on click.  Also it's just nice to see the list of Methods rather than trying to count them on a long flipping page :-S
 
-* http://davidshimjs.github.io/jaguarjs/doc/collie.FPSConsole.html
-* add more examples here :-P
+## templates so far ##
+
+* egg - basic with crap red background
+* eyeamaman - basic with colour theme and tasty javascript being added
