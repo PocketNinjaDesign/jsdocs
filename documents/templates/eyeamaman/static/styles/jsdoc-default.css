@@ -98,7 +98,7 @@ nav {
   margin-top: 28px;
   width: 30%;
   box-sizing: border-box;
-  border-left: 1px solid #ccc;
+  border-left: 1px solid #181b0f;
   padding-left: 16px;
 }
 nav ul {
@@ -167,8 +167,10 @@ h5,
 }
 
 .subsection-title {
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 10px;
+  border-top: 30px solid rgba(0,0,0,0.8);
+  color: rgba(0,0,0,0.8);
+  font-size: 40px;
+  line-height: 43px;
 }
 
 h6 {
@@ -366,14 +368,16 @@ h6 {
 #subNav {
 }
 .sub-nav.displayed {
+  background: rgba(60,100,171,0.1);
   position: fixed;
   top: 0;
   bottom: 0;
   overflow-y: auto;
   left: 60%;
   width: 15%;
-  margin-top: 28px;
-  padding: 112px 0 0 0;
+  padding: 140px 0 0 0;
+  box-shadow: inset 10px 0 10px rgba(0,0,0,0.1);
+  border-left: 1px solid #555A49;
 }
 .sub-menu-header {
   font-size: 18px;
@@ -382,7 +386,7 @@ h6 {
   cursor: pointer;
 }
 .sub-menu-header.active {
-  background: #f28c8c;
+  background: #0c0e08;
 }
 .sub-menu-item {
   font-size: 12px;
@@ -392,7 +396,7 @@ h6 {
   margin: 0 0 1px 0;
 }
 .sub-menu-item.active {
-  background: #d2c371;
+  background: #0c0e08;
 }
 
 .side-nav {
@@ -400,15 +404,28 @@ h6 {
   top: 0;
   right: 0;
   bottom: 0;
+  margin: 0;
+  padding-top: 28px;
   overflow-y: auto;
   width: 30%;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 
 /* Overrides */
 
-.prettyprint.linenums {
+.prettyprint-wrapper {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 0 20px #000;
+  color: #8e908c;
+  padding: 10px;
+}
+
+.prettyprint.linenums {
+  border: none;
+}
+.prettyprint.linenums li.selected,
+.prettyprint.linenums li.selected * {
+  background: #c7d4ab;
 }
