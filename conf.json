@@ -1,12 +1,14 @@
 {
   "opts": {
-    "template": "documents/templates/egg"
+    "template": "documents/templates/eyeamaman",
+    "destination": "./docs/"
   },
   "tags": {
     "allowUnknownTags": true,
     "dictionaries": ["jsdoc","closure"]
   },
   "source": {
+    "include": "./dev/js/",
     "includePattern": ".+\\.js(doc)?$",
     "excludePattern": "(^|\\/|\\\\)_"
   },

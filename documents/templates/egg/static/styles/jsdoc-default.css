@@ -36,7 +36,6 @@ body
     font-family: 'Open Sans', sans-serif;
     line-height: 1.5;
     color: #4d4e53;
-    background-color: #f00;
 }
 
 a, a:visited, a:active {
@@ -48,10 +47,9 @@ a:hover {
     text-decoration: underline;
 }
 
-header
-{
+header {
     display: block;
-    padding: 0px 4px;
+    padding: 0 4px;
 }
 
 tt, code, kbd, samp {
