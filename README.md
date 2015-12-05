@@ -14,14 +14,14 @@ Things to look into are:
 * install JSDOC
 
 
-### Downloading repo ###
+##### Downloading repo #####
 
 ```
 git clone git@github.com:eyeamaman/jsdocs.git
 ```
 
 
-### Installing JSDOC ###
+##### Installing JSDOC #####
 
 ```
 npm install jsdoc
