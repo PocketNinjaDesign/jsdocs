@@ -1,6 +1,6 @@
 {
   "opts": {
-    "template": "documents/templates/eyeamaman",
+    "template": "documents/templates/pocketninja",
     "destination": "./docs/"
   },
   "tags": {
