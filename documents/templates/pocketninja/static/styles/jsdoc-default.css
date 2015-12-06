@@ -92,9 +92,16 @@ tt, code, kbd, samp {
   width: 80px;
   height: 88px;
   background: url(img/logo.png) no-repeat;
+  margin-bottom: 30px;
 }
 .side-nav .nav-home {
   font-weight: 100;
+  font-size: 20px;
+}
+.side-nav .nav-home a,
+.side-nav .nav-home a:visited,
+.side-nav .nav-home a:active {
+  font-family: 'Open Sans', sans-serif;
 }
 .side-nav a,
 .side-nav a:visited,
@@ -140,9 +147,18 @@ tt, code, kbd, samp {
   overflow-y: auto;
   left: 60%;
   width: 15%;
-  padding: 122px 0 0 0;
+  padding: 143px 0 0 0;
   color: #fff;
   border-left: 20px solid #333;
+}
+.sub-nav.displayed .shuriken {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: url(img/shuriken-large.png) no-repeat -400px 0;
+  width: 100%;
+  height: 800px;
+  opacity: 0.1;
 }
 .sub-menu-header,
 .sub-menu-item {
@@ -189,13 +205,10 @@ tt, code, kbd, samp {
   left: 4px;
 }
 .sub-menu-header:hover,
-.sub-menu-item:hover {
-  background: #7d393a;
-  padding-left: 30px;
-}
+.sub-menu-item:hover,
 .sub-menu-header.active,
 .sub-menu-item.active {
-  background: #7d393a;
+  background: rgba(125, 57, 58, 0.6);
   padding-left: 30px;
 }
 
