@@ -50,4 +50,17 @@ All you have to do is duplicate one of the folders and create your own template 
 ## templates so far ##
 
 * egg - basic with crap red background
-* eyeamaman - basic with colour theme and tasty javascript being added
+* eyeamaman - basic with colour theme and tasty javascript being added, not blue though :-S
+* pocketninja - This is starting to get good.  more styling control and starting to look spiffing.
+
+To use any of these templates, simply edit the conf.json file and change the line
+
+```
+"template": "documents/templates/{NAME}",
+```
+
+to any of the template names above, eg:
+
+```
+"template": "documents/templates/eyeamaman",
+```
