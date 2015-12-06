@@ -290,42 +290,52 @@ function attachModuleSymbols(doclets, modules) {
 }
 
 function buildMemberNav(items, itemHeading, itemsSeen, linktoFn) {
-    var nav = '';
+  var nav = '';
 
-    if (items.length) {
-        var itemsNav = '';
+  if (items.length) {
+    var itemsNav = '';
 
-        items.forEach(function(item) {
-            if ( !hasOwnProp.call(item, 'longname') ) {
-                itemsNav += '<li>' + linktoFn('', item.name) + '</li>';
-            }
-            else if ( !hasOwnProp.call(itemsSeen, item.longname) ) {
-                var displayName;
-                if (env.conf.templates.default.useLongnameInNav) {
-                    displayName = item.longname;
-                } else {
-                    displayName = item.name;
-                }
-                itemsNav += '<li>' + linktoFn(item.longname, displayName.replace(/\b(module|event):/g, '')) + '</li>';
+    items.forEach(function(item) {
+      if ( !hasOwnProp.call(item, 'longname') ) {
+          itemsNav += '<li>' + linktoFn('', item.name) + '</li>';
+      }
+      else if ( !hasOwnProp.call(itemsSeen, item.longname) ) {
+        var displayName;
+        var displayNameCleaned;
 
-                itemsSeen[item.longname] = true;
-            }
-        });
-
-        if (itemsNav !== '') {
-            nav += '<h3>' + itemHeading + '</h3><ul>' + itemsNav + '</ul>';
+        if (env.conf.templates.default.useLongnameInNav) {
+          displayName = item.longname;
         }
-    }
+        else {
+          displayName = item.name;
+        }
 
-    return nav;
+        displayNameCleaned = displayName.replace(/\b(module|event):/g, '');
+        itemsNav += '<li class="side-menu-item ' + strToLowercaseBasics(displayNameCleaned) + '">' + linktoFn(item.longname, displayNameCleaned) + '</li>';
+
+        itemsSeen[item.longname] = true;
+      }
+    });
+
+    if (itemsNav !== '') {
+      nav += '<h3 class="side-menu-item-heading">' + itemHeading + '</h3>';
+      nav += '<ul class="side-menu-' + itemHeading.toLowerCase() + '-list">' + itemsNav + '</ul>';
+    }
+  }
+
+  return nav;
+}
+
+function strToLowercaseBasics(str) {
+  return str.replace(/\//g, '-').toLowerCase();
 }
 
 function linktoTutorial(longName, name) {
-    return tutoriallink(name);
+  return tutoriallink(name);
 }
 
 function linktoExternal(longName, name) {
-    return linkto(longName, name.replace(/(^"|"$)/g, ''));
+  return linkto(longName, name.replace(/(^"|"$)/g, ''));
 }
 
 /**
@@ -343,7 +353,7 @@ function linktoExternal(longName, name) {
  * @return {string} The HTML for the navigation sidebar.
  */
 function buildNav(members) {
-    var nav = '<h2><a href="index.html">Home</a></h2>';
+    var nav = '<h2 class="nav-home"><a href="index.html">Home</a></h2>';
     var seen = {};
     var seenTutorials = {};
 

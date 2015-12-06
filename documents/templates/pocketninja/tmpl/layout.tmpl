@@ -14,9 +14,11 @@
 
   <script src="scripts/jquery-2.1.4.min.js"></script>
   <script src="scripts/sub-nav.js"></script>
+  <script src="scripts/class-maker.js"></script>
+  <script src="scripts/side-menu.js"></script>
 </head>
 
-<body data-class-maker="<?js= title ?>">
+<body class="page" data-class-maker='{"text": "<?js= title ?>", "generateSelectedData": true}'>
   <div id="main" class="main">
     <h1 class="page-title"><?js= title ?></h1>
     <?js= content ?>

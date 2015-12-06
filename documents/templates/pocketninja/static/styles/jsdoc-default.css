@@ -93,6 +93,9 @@ tt, code, kbd, samp {
   height: 88px;
   background: url(img/logo.png) no-repeat;
 }
+.side-nav .nav-home {
+  font-weight: 100;
+}
 .side-nav a,
 .side-nav a:visited,
 .side-nav a:active {
@@ -108,8 +111,12 @@ tt, code, kbd, samp {
   margin: 0;
   list-style-type: none;
 }
-.side-nav li {
+.side-nav .side-menu-item {
   margin-top: 6px;
+  padding: 3px 4px;
+}
+.side-nav .side-menu-item.active {
+  background-color: rgba(0,0,0,0.1);
 }
 .side-nav h3 {
   margin-top: 12px;
@@ -172,6 +179,7 @@ tt, code, kbd, samp {
   animation:spin 1s linear infinite;
 }
 .sub-menu-header:before {
+  background-image: url(img/shuriken-grey.png);
   top: 6px;
 }
 .sub-menu-header:hover:before,
@@ -196,6 +204,26 @@ tt, code, kbd, samp {
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 
+
+.article-sub-section {
+}
+.article-sub-section .list {
+  margin-top: 10px;
+}
+.article-sub-section .list-item {
+  list-style: none;
+  position: relative;
+}
+.article-sub-section .list-item:before {
+  position: absolute;
+  left: -20px;
+  top: 6px;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: url(img/shuriken-grey.png) no-repeat;
+  background-size: contain;
+}
 
 
 
@@ -270,7 +298,7 @@ h5,
 }
 
 .subsection-title {
-  color: #b8b8b8;
+  color: #fff;
   font-size: 40px;
   line-height: 43px;
   border-bottom: 30px solid #161616;
@@ -333,7 +361,7 @@ h6 {
   width: 120px;
   float: left;
   padding-left: 10px;
-  padding-top: 6px;
+  padding-top: 3px;
 }
 .details dd {
   margin-left: 70px;
@@ -346,7 +374,7 @@ h6 {
 }
 .details li {
   margin-left: 30px;
-  padding-top: 6px;
+  padding-top: 3px;
 }
 .details pre.prettyprint {
   margin: 0
