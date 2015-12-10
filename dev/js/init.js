@@ -1,14 +1,23 @@
 
+/**
+ * @fileOverview Basic javascript files for practicing with JSDocs
+ * @author <a href="mailto:eyeamaman@gmail.com">Pocketninja</a>
+ * @version 1.0.0
+ * @copyright eyeamaman 2015
+ */
 
 /**
  * Core namespace.
  * @namespace
  */
 var VD = {
-  /** documented as VD.widget */
+  /** @namespace */
   widgets: {},
-  /** documented as VD.utils */
+  /**
+   * @namespace
+   * @private
+   */
   utils: {},
-  /** documented as VD.helpers */
+  /** @namespace */
   helpers: {}
 };

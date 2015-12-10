@@ -15,6 +15,13 @@
  * @returns {Object} return - list of public functions
  */
 VD.widgets.world = function(manyName, dropdown, tooltip, eggPlant, sausageDog, cucumber) {
+
+  /**
+   * @type {String}
+   * @constant
+   * */
+  var CONSTANT_TEXT = "I_AM_CONSTANT_TEXT";
+
   /**
    * name - sets to worldName
    * @var {String} name
@@ -28,10 +35,10 @@ VD.widgets.world = function(manyName, dropdown, tooltip, eggPlant, sausageDog, c
   var crazy = true;
 
   /**
-   * eggplantList - sets to worldName
-   * @var {String} eggplantList
+   * eggplantList - A list of eggplant names
+   * @var {Array} eggplantList
    */
-  var eggplantList = eggPlant;
+  var eggplantList = eggPlant || [];
 
   /**
    * options - Many options
@@ -50,6 +57,7 @@ VD.widgets.world = function(manyName, dropdown, tooltip, eggPlant, sausageDog, c
    *
    * @function getName
    * @returns {String} return - the world name
+   *
    */
   var getName = function() {
     return name;
@@ -58,10 +66,10 @@ VD.widgets.world = function(manyName, dropdown, tooltip, eggPlant, sausageDog, c
   /**
    * Sets crazy state of the world
    *
-   * @function isCrazy
-   * @param {Boolean} bCrazy - For setting to crazy or not
+   * @function setCrazy
+   * @param {Boolean} [bCrazy=false] - For setting to crazy or not
    */
-  var isCrazy = function(bCrazy) {
+  var setCrazy = function(bCrazy) {
     crazy = bCrazy || false;
   };
 
@@ -86,6 +94,20 @@ VD.widgets.world = function(manyName, dropdown, tooltip, eggPlant, sausageDog, c
   };
 
   /**
+   * Adds 100 to any given value
+   *
+   * @function add100
+   * @param {Number} num - For setting to sleeping or not
+   *
+   * @example
+   * add100(3000);
+   * // 3100
+   */
+  var add100 = function(num) {
+    return num + 100;
+  };
+
+  /**
    * Returns the list of eggplants
    *
    * @function getEggPlantList
@@ -97,9 +119,10 @@ VD.widgets.world = function(manyName, dropdown, tooltip, eggPlant, sausageDog, c
 
   return {
     getName: getName,
-    isCrazy: isCrazy,
+    setCrazy: setCrazy,
     getOptions: getOptions,
     setDogsSleepState: setDogsSleepState,
+    add100: add100,
     getEggPlantList: getEggPlantList
   }
 };
