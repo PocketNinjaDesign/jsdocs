@@ -95,7 +95,7 @@ VD.widgets.world = function(manyName, dropdown, tooltip, eggPlant, sausageDog, c
 
   /**
    * Adds 100 to any given value
-   *
+   * @private
    * @function add100
    * @param {Number} num - For setting to sleeping or not
    *
@@ -122,7 +122,6 @@ VD.widgets.world = function(manyName, dropdown, tooltip, eggPlant, sausageDog, c
     setCrazy: setCrazy,
     getOptions: getOptions,
     setDogsSleepState: setDogsSleepState,
-    add100: add100,
     getEggPlantList: getEggPlantList
   }
 };

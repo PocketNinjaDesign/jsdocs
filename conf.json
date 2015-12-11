@@ -1,7 +1,9 @@
 {
   "opts": {
     "template": "documents/templates/pocketninja",
-    "destination": "./docs/"
+    "destination": "./docs/",
+    "recurse": true,
+    "private": true
   },
   "tags": {
     "allowUnknownTags": true,
