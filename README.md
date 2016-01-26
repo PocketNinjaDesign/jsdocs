@@ -1,6 +1,6 @@
 # JSDOC Documentation #
 
-This is a current working but very basic jsdoc repo.  We'll be using this on the main responsive site but please feel free and add to and amend any time.
+This is a current working but very basic jsdoc repo.
 
 Things to look into are:
 
